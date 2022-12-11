@@ -7,7 +7,7 @@ module.exports = {
     execute(client) {
         client.user.setActivity('at your command', {type: ActivityType.Playing });
         console.log(`----------------------------------------------`);
-        console.log(chalk.yellow.bold('SENPAI!') + ` [${client.user.tag}] just woke up!`);
+        console.log(chalk.red.bold('SENPAI!') + ` [${chalk.blue.bold(client.user.tag)}] just woke up!`);
         console.log(`----------------------------------------------`);
     },
 };
