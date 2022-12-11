@@ -9,15 +9,9 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.commands = new Collection();
 
-const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWith('.js'));
-
-for(const file of commandFiles) {
-    const command = require(`./commands/${file}`);
-    client.commands.set(command.name, command);
-}
+main();
 
 client.on('ready', () => {
-    client.user.setActivity('in my support server', {type: "PLAYING"});
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
@@ -37,10 +31,7 @@ client.on('interactionCreate', async interaction => {
         await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true })
     }
   
-    /* if (interaction.commandName === 'ping') {
-    await interaction.reply('Pong!');
-    }
-    else if (interaction.commandName === 'info') {
+    /*else if (interaction.commandName === 'info') {
     await interaction.reply({ embeds: [informationEmbed] });
     } */
 });
@@ -60,19 +51,6 @@ const informationEmbed = new EmbedBuilder()
     .setTimestamp()
     .setFooter({text: 'This bot is still under construction. Please be kind with it!'});
 
-/* const commands = [
-  {
-    name: 'ping',
-    description: 'Replies with Pong!',
-  },
-  {
-    name: 'info',
-    description: 'Sends an information about the bot',
-  },
-]; */
-
-const rest = new REST({ version: '10' }).setToken(TOKEN);
-
 (async () => {
   try {
     console.log('Started refreshing application (/) commands.');
@@ -83,3 +61,13 @@ const rest = new REST({ version: '10' }).setToken(TOKEN);
 })();
 
 client.login(TOKEN);
+
+async function main() {
+    const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWith('.js'));
+
+    for(const file of commandFiles) {
+        const command = require(`./commands/${file}`);
+        client.commands.set(command.name, command);
+    }
+
+}
