@@ -29,10 +29,6 @@ client.on('interactionCreate', async interaction => {
         console.log(error);
         await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true })
     }
-  
-    /*else if (interaction.commandName === 'info') {
-    await interaction.reply({ embeds: [informationEmbed] });
-    } */
 });
 
 (async () => {
