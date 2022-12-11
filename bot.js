@@ -11,14 +11,9 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.commands = new Collection();
 
 
-// Whe nthe client is ready, run this code
-client.once(Events.ClientReady, c => {
-    console.log('---------------------------------');
-    console.log(`Read! Logged in as [${client.user.tag}]`);
-    console.log('---------------------------------');
-});
+getCommands();
+getEvents();
 
-get_commands();
 
 // Receiving command interactions
 client.on(Events.InteractionCreate, async interaction => {
@@ -41,7 +36,22 @@ client.on(Events.InteractionCreate, async interaction => {
 // Log in to Discord with your client's token
 client.login(TOKEN);
 
-async function get_commands() {
+async function getEvents() {
+    const eventsPath = path.join(__dirname, 'events');
+    const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
+
+    for(const file of eventFiles) {
+        const filePath = path.join(eventsPath, file);
+        const event = require(filePath);
+        if(event.once) {
+            client.once(event.name, (...args) => event.execute(...args));
+        } else {
+            client.on(event.name, (...args) => event.execute(...args));
+        }
+    }
+}
+
+async function getCommands() {
     const commandsPath = path.join(__dirname, 'commands');
     const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
