@@ -6,7 +6,8 @@ const TOKEN = process.env.BOT_TOKEN;
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setActivity('in my support server', {type: "PLAYING"});
+    console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('interactionCreate', async interaction => {
@@ -15,28 +16,25 @@ client.on('interactionCreate', async interaction => {
   if (interaction.commandName === 'ping') {
     await interaction.reply('Pong!');
   }
-  else if (interaction.commandName === 'embed') {
+  else if (interaction.commandName === 'info') {
     await interaction.reply({ embeds: [informationEmbed] });
   }
 });
 
 const informationEmbed = new EmbedBuilder()
-    .setTitle('Some title')
-    .setDescription('this is a testing embed')
+    .setTitle('Crimson Bot')
+    .setDescription('This bot was created for testing some stuff, and playing around with javascript. Here are some information about me! Feel free to use me 😏')
     .setColor(0x0099FF)
     .setURL('https://crmsn.xyz/')
-    .setThumbnail('https://i.imgur.com/AfFp7pu.png')
-    .setAuthor({name: 'Crimsonshade', iconURL: 'https://i.imgur.com/AfFp7pu.png'})
+    .setThumbnail(`https://i.waifu.pics/DDVvMj4.jpg`)
+    .setAuthor({name: 'Crimsonshade', iconURL: `https://crmsn.xyz/netliheart.svg`})
     .setFields(
-        {name: 'Regular field title', value: 'Some value here' },
-        { name: '\u200B', value: '\u200B' },
-        { name: 'Inline field title', value: 'Some value here', inline: true },
-        { name: 'Inline field title', value: 'Some value here', inline: true},
+        {name: 'Commands', value: 'Here you can find a list of commands, I can do. Feel free to use them!' },
+        { name: 'ping', value: 'Just replies with "Pong!"', inline: true },
+        { name: 'info', value: 'Sends this embed', inline: true}
     )
-    .addFields({name: 'Inline field title', value: 'Some valye here', inline: true})
-    .setImage('https://i.imgur.com/AfFp7pu.png')
     .setTimestamp()
-    .setFooter({text: 'Some footer text'});
+    .setFooter({text: 'This bot is still under construction. Please be kind with it!'});
 
 const commands = [
   {
