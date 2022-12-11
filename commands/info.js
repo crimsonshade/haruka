@@ -20,10 +20,9 @@ module.exports = {
             { name: '`ping`', value: 'I just reply with "pong!"', inline: true},
             { name: '`user`', value: 'I show you some informations about yourself!', inline: true},
             { name: '`server`', value: 'I give you some informations about your server!', inline: true },
-            { name: '`info`', value: "This Embed right here 😺", inline: true}
+            { name: '`info`', value: "This Embed right here 😺", inline: true},
+            { name: '`anime-image`', value: 'I show you a beatiful image/gif, based on the category you like!', inline: true}
         )
-    
-            // 
         await interaction.reply({ embeds: [infoEmbed] });
     },
 };
