@@ -5,7 +5,8 @@
   "main": "src/bot.js",
   "scripts": {
     "test": "node bot.js",
-    "deploy": "node deploy-commands.js"
+    "d-app": "node deploy-app.js",
+    "d-dev": "node deploy-dev.js"
   },
   "keywords": [],
   "author": "Crimsonshade",

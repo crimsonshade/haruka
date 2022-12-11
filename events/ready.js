@@ -1,3 +1,4 @@
+const chalk = require('chalk');
 const { Events, ActivityType } = require('discord.js');
 
 module.exports = { 
@@ -6,7 +7,7 @@ module.exports = {
     execute(client) {
         client.user.setActivity('at your command', {type: ActivityType.Playing });
         console.log(`----------------------------------------------`);
-        console.log(`SENPAI! [${client.user.tag}] just woke up!`);
+        console.log(chalk.yellow.bold('SENPAI!') + ` [${client.user.tag}] just woke up!`);
         console.log(`----------------------------------------------`);
     },
 };

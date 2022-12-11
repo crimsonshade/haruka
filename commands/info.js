@@ -21,7 +21,8 @@ module.exports = {
             { name: '`user`', value: 'I show you some informations about yourself!', inline: true},
             { name: '`server`', value: 'I give you some informations about your server!', inline: true },
             { name: '`info`', value: "This Embed right here 😺", inline: true},
-            { name: '`anime`', value: 'the `sfw` subcommand shows you some funny photos!\nThe `nsfw` does something else 😼', inline: true}
+            { name: '`anime`', value: 'the `sfw` subcommand shows you some funny photos!\nThe `nsfw` does something else 😼', inline: true},
+            { name: '`bakka`', value: 'You have to select a `Voice Channel` and I call a random guy in there a **BAKKA**!', inline: true }
         )
         await interaction.reply({ embeds: [infoEmbed] });
     },
