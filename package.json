@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/bot.js",
   "scripts": {
-    "test": "node bot.js"
+    "test": "node bot.js",
+    "deploy": "node deploy-commands.js"
   },
   "keywords": [],
   "author": "Crimsonshade",
