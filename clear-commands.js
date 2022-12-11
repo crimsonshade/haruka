@@ -2,6 +2,8 @@ require('dotenv').config();
 const { REST, Routes } = require('discord.js');
 const fs = require('node:fs');
 
+Guild.commands.set([])
+
 const token = process.env.BOT_TOKEN;
 const guildid = process.env.GUILD_ID;
 const clientid = process.env.CLIENT_ID;
@@ -27,6 +29,7 @@ const rest = new REST({ version: '10' }).setToken(token);
         const data = await rest.put(
             Routes.applicationGuildCommands(clientid, guildid), { body: commands },
         );
+
         console.log(`Successfully reloaded ${data.length} applications (/) commands.`);
     } catch (error) {
         console.error(error);
