@@ -7,19 +7,18 @@ module.exports = {
         .setDescription('Provies information about the user')
         .addUserOption(option =>
             option.setName('user')
-                .setDescription('Select a user, you want to get some infos')),
+                .setDescription('Select user to cuddle')),
     async execute(interaction) {
-        const client = interaction.client;
-        const user = interaction.options.getUser('user') ?? interaction.user;
-        const userTag = interaction.options.getUser('user').tag ?? interaction.user.tag
+	    const target = interaction.options.getUser('user') ?? interaction.user;
+        const guild = interaction.guild.members.fetch(target.id);
         const userEmbed = new EmbedBuilder()
         .setColor(0x0099FF)
         .setTitle('User Information')
-        .setThumbnail(`${user.displayAvatarURL()}`)
-        .setDescription(`Here are some informations about @${userTag}`)
+	.setThumbnail(`${target.avatarURL()}`)
+        .setDescription(`Here are some informations about <@${target.id}>`)
         .addFields(
-            { name: 'Joined at', value: `${moment(user.member.joinedAt).format('DD MMM YYYY')}`, inline: true },
-            { name: 'Created at', value: `${moment(user.createdAt.format('DD MMM YYYY'))}`, inline: true }
+            { name: 'Joined at', value: `${guild.joinedAt}`, inline: true },
+            { name: 'Created at', value: '`' + moment(target.createdAt).format('DD MMM YYYY') + '`', inline: true }
         )
         
         await interaction.reply({ embeds: [userEmbed] });
