@@ -35,6 +35,8 @@
 This bot was created just for fun. I wanted to learn javascript a bit, and ended up with the fought "oh a discord bot would be cool!" So I started working on this one! Currently there aren't that much features, and the bot, or let's call her **Haruka** haha, is currently self hostes on my local machine. (So she isn't online for the longest time) <br/>
 But I am looking for a solutionfor this problem!
 
+Also just for information, I googled some Japanese names (because I love Japan, and the japanese culture), and found the Name **[HARUKA](https://japanese-names.info/first-name/haruka-2/)** which means something like *"forever and ever"* or *"beauty ocean"*. And it looked beautiful in my eyes, so I called her like that ^^ (and yes, she's a girl haha)
+
 # Installation
 
 There are two ways to get the bot on your server. <br/>
