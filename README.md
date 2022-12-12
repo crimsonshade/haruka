@@ -64,7 +64,7 @@ And thats everything you have to do! The last thing is to run the `npm run test`
 In here you can find a list of all commands of the bot, and how they work. (Some of them are maybe bit weard, and have to be reworked later on) All commands are slash commands `(/)`. So there is no prefix for this bot.
 
 ## Help
-<summary>v.1.1.0</summary>
+<summary>current</summary>
 
 The `/help` command shows a few commands, the bot can perform. (Maybe change the alignment of the commands. Instead of inline, make them block)
 
@@ -73,7 +73,7 @@ The `/help` command shows a few commands, the bot can perform. (Maybe change the
 </div>
 
 ## Info
-<summary>v.1.1.0</summary>
+<summary>current</summary>
 
 The `/info` command shows some small changes. The first one is, there aren't any commands presented anymore. The birthday format has changed, and the creator is now clickable. (The Embed description still need to be changed)
 

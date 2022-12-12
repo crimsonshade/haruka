@@ -16,7 +16,7 @@ module.exports = {
         .setFooter({ text: 'crafted with ♥️ by `Crimsonshade`' })
         .setDescription(`Here are some informations about me! Feel free to use my commands Senpai!`)
         .addFields(
-            { name: 'Birthday:', value: 'My birthday is the `' + moment(client.user.createdAt).format('DD-MMM-YYYY') + '`'},
+            { name: 'Birthday:', value: 'My birthday is the `' + moment(client.user.createdAt).format('DD MMM YYYY') + '`'},
             { name: `Creator:`, value: 'My creater is ' + `<@${creator}> ` +'` (my only Darling 😽)`'}, 
         )
 
