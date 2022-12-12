@@ -22,6 +22,7 @@
 - [General](#general)
 - [Installation](#installation)
 - [Current Commands](#current-commands)
+    - [Help](#help)
     - [Info](#info)
     - [Ping](#ping)
     - [User](#user)
@@ -31,6 +32,8 @@
 - [Support and Issues](#support)
 
 # General
+
+The current version of the bot is `v1.1.0`
 
 This bot was created just for fun. I wanted to learn javascript a bit, and ended up with the fought "oh a discord bot would be cool!" So I started working on this one! Currently there aren't that much features, and the bot, or let's call her **Haruka** haha, is currently self hostes on my local machine. (So she isn't online for the longest time) <br/>
 But I am looking for a solutionfor this problem!
@@ -57,11 +60,31 @@ And thats everything you have to do! The last thing is to run the `npm run test`
 # Current Commands
 In here you can find a list of all commands of the bot, and how they work. (Some of them are maybe bit weard, and have to be reworked later on) All commands are slash commands `(/)`. So there is no prefix for this bot.
 
+## Help
+<summary>v.1.1.0</summary>
+
+The `/help` command shows a few commands, the bot can perform. (Maybe change the alignment of the commands. Instead of inline, make them block)
+
+<div align="center">
+    <img src="./img/help.png" />
+</div>
+
 ## Info
+<summary>v.1.1.0</summary>
+
+The `/info` command shows some small changes. The first one is, there aren't any commands presented anymore. The birthday format has changed, and the creator is now clickable. (The Embed description still need to be changed)
+
+<div align="center">
+    <img src="./img/info-upd.png" />
+</div>
+
+<details>
+<summary>v.1.0.0</summary>
 The `/info` command is the same like the `help` command (which doesn't exist right now) and displays not only a few infos about the bot, but also a brieve summary of the commands.
 <div align="center">
-    <img src="./img/info-img.png" alt="The info command output"/>
+    <img src="./img/old/info.png" alt="The info command output"/>
 </div>
+</details>
 
 ## ping
 The `/ping` command currently only replies with "Pong!". The latency has to be calculated later on.
@@ -69,7 +92,7 @@ The `/ping` command currently only replies with "Pong!". The latency has to be c
 ## user
 the `/user` command shows a few informations about the user who calls it. It's nothing special. Just one of the first commands I created for it, because of a tutorial, and I started working on it, and making it an embed and stuff like that, so I kept it. (and it's kinda cute to have haha)
 <div align="center">
-    <img src="./img/user-img.png" alt="The user command output"/>
+    <img src="./img/user.png" alt="The user command output"/>
 </div>
 
 ## server
@@ -78,13 +101,13 @@ the `/server` command **will be updated**. Currently, it's just plain text. Real
 ## anime
 the `/anime` commands outputs a random image, using the [waifu.pics](https://waifu.pics/) API. If you use this command, you will have the choice between *sfw (safe for work)* and *nsfw (not safe for work)* images. You also get some options which are required(!) so the API call works fine. Down below is an image, of the options. Just start typing the option, and press enter if the one you want is selected.
 <div align="center">
-    <img src="./img/anime-img-options.png" alt="The anime command output"/>
+    <img src="./img/anime-options.png" alt="The anime command output"/>
 </div>
 
 ## baka
 The `/baka` command also has an option for you you pick. But in this case, it is a Discord Channel. (Currently you can select *text channels* to, but I will remove this option later on). You just can pick a voicechannel with a few people in, and the bot, will pick someone inside, and call him a bakka! (means idiot on japanese) and don't mind the typo in the image. You write it if one k. (And yes this one was selected random xD)
 <div align="center">
-    <img src="./img/baka-img.png" alt="The bakka command output"/>
+    <img src=".img/baka.png" alt="The bakka command output"/>
 </div>
 
 # Future of the bot
