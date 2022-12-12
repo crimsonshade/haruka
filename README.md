@@ -92,11 +92,12 @@ I will try to add stuff when I got the time to do it. Like I explained in the Ge
 
 | To do | Description |
 |:-------:|:-----|
-| `ping` | Calculate the latency of the user |
-| `anime` | Add some funny text to the output. Like `@sender wants to **kiss** @target` |
-| `server` | Make the server command look a bit fancier. |
-| `baka` | Change the typos |
-| `online` | Host the bot, so he is only all the time |
+| `/ping` | Calculate the latency of the user |
+| `/anime` | Add some funny text to the output. Like `@sender wants to **kiss** @target` |
+| `/server` | Make the server command look a bit fancier. |
+| ~`/baka`~ | ~Change the typos~ |
+| ~`/help`~ | ~Create a help command~ |
+| online | Host the bot, so he is only all the time |
 |  | more will be added later on |
 
 # Support
