@@ -15,6 +15,9 @@
     <a href="https://github.com/crimsonshade/haruka/issues">
         <img src="https://img.shields.io/github/issues-raw/crimsonshade/haruka?label=commited%20issues&logo=github&logoColor=white&style=flat-square" alt="commited issues"/>
     </a>
+    <a href="#">
+        <img src="https://img.shields.io/github/package-json/v/crimsonshade/haruka?style=flat-square" />
+    </a>
 </div>
 
 # Table of Content
@@ -107,7 +110,7 @@ the `/anime` commands outputs a random image, using the [waifu.pics](https://wai
 ## baka
 The `/baka` command also has an option for you you pick. But in this case, it is a Discord Channel. (Currently you can select *text channels* to, but I will remove this option later on). You just can pick a voicechannel with a few people in, and the bot, will pick someone inside, and call him a bakka! (means idiot on japanese) and don't mind the typo in the image. You write it if one k. (And yes this one was selected random xD)
 <div align="center">
-    <img src=".img/baka.png" alt="The bakka command output"/>
+    <img src="./img/baka.png" alt="The bakka command output"/>
 </div>
 
 # Future of the bot
@@ -118,10 +121,22 @@ I will try to add stuff when I got the time to do it. Like I explained in the Ge
 | `/ping` | Calculate the latency of the user |
 | `/anime` | Add some funny text to the output. Like `@sender wants to **kiss** @target` |
 | `/server` | Make the server command look a bit fancier. |
-| ~`/baka`~ | ~Change the typos~ |
-| ~`/help`~ | ~Create a help command~ |
+| `/info` | Change embed description. (Currently it says, "use my commads") |
+| `/8ball` | Make an 8Ball command, for the user ask some questions |
+| `/image` | Change the name to image? |
+| `/anime` | Shows the user a few infos about the Anime he inputed |
 | online | Host the bot, so he is only all the time |
 |  | more will be added later on |
+
+<details>
+    <summary>Done</summary>
+
+| To do | Description |
+|:-----:|:------------|
+| ~`/baka`~ | ~Change the typos~ |
+| ~`/help`~ | ~Create a help command~ |
+
+</details>
 
 # Support
 If you find some typos in this text, please open an [issues](https://github.com/crimsonshade/haruka/issues) and let me know about it! <br />
